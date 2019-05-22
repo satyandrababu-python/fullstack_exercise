@@ -1,0 +1,1 @@
+GUIDE_FILE_PATH = 'static_global/json/guide.json'
