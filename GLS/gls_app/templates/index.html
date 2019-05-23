@@ -21,10 +21,11 @@ popup-overlay{
   position: absolute;
   visibility:visible;
   text-align:center;
-  background:gray;
-  border:3px solid #666666;
-  width:300px;
+  background:#f1f3f3;
+  border:1px solid #666666;
+  width:200px;
   height:100px;
+  border-radius: 10px;
   /* left:300px;  */
 }
 
@@ -38,6 +39,16 @@ popup-overlay{
   visibility:visible;
 }
 
+.close {
+	position: absolute;
+	left: 170px;
+	top: 0;
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:#ccc;
+}
+
 </style>
 <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="{% static 'js/player.js' %}"></script>
@@ -45,11 +56,8 @@ popup-overlay{
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body id="body_id">
-	<div class="alert alert-info">
-		<strong>Info!</strong> Please click on first div to start Guided navigation.
-	</div>
-	<!--<h1>GLS Fullstack Exercise</h1>-->
-	<div class="myClass1" id="id_1">First tip osn me using id.</div>
+	<h1>GLS Fullstack Exercise</h1>
+	<div class="myClass1" id="id_1">First tip on me using id.</div>
 
 	<div class="myClass2">Second tip on me using class.</div>
 
@@ -59,9 +67,8 @@ popup-overlay{
 	<div class="popup-overlay" id='pop_model'>
 		<div class="popup-content">
 			<p></p>
-			<span id="next_container"></span>
-		   <!--popup's close button-->
-			<button class="close" id='close_modal'>Close</button>
+				<span id="next_container"></span>
+			<button class="close" id='close_modal'>x</button>
 		</div>
 	</div>
 </body>

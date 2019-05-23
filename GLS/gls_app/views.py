@@ -8,7 +8,6 @@ class Home(TemplateView):
     template_name = "index.html"
 
 def serve(request):
-    # json_file_path = 'static/json/guide.json'
     path = os.path.join(settings.BASE_DIR, GUIDE_FILE_PATH)
     with open(path , 'r') as myfile:
         data=myfile.read()
